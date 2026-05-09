@@ -1,19 +1,72 @@
-h1{
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgb(51, 51, 151), rgb(77, 85, 173));
+}
+
+/* Seu container original preservado */
+.assinar {
+    max-width: 500px;
+    background: #fff;
+    margin: 50px auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1, h3 {
     color: rgb(46, 46, 163);
-    text-align: center;
 }
 
-h3{
+h1 { text-align: center; }
+
+/* Estilo para os campos de texto e select */
+input[type="text"], 
+input[type="email"], 
+select {
+    width: 100%; /* Ocupa a largura disponível no container */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Impede que o padding aumente a largura total */
+}
+
+label {
+    display: block;
+    font-weight: bold;
     color: rgb(46, 46, 163);
 }
 
-img{
-    width: 60px;
-    height: 28px;
+/* --- Alinhamento do Pagamento --- */
+
+.metodos-pagamento {
+    margin-top: 10px;
 }
 
-body{
-    font-family: arial;
+.opcao-pagamento {
+    display: flex;       /* Alinha rádio e label na mesma linha */
+    align-items: center; /* Centraliza verticalmente a bolinha com a imagem */
+    gap: 10px;           /* Espaço entre a bolinha e a imagem */
+    margin-bottom: 15px; /* Espaço entre cada linha de pagamento */
+}
+
+/* IMPORTANTE: Resetar o estilo apenas para o rádio */
+.opcao-pagamento input[type="radio"] {
+    width: auto;  /* Remove a largura de 100% */
+    height: auto;
+    margin: 0;
+}
+
+/* Remove a margem superior do label apenas aqui dentro */
+.opcao-pagamento label {
+    margin-top: 0;
+    cursor: pointer;
+}
+
+img {
+    width: 55px;
+    height: auto;
 }
 
 button {
@@ -23,37 +76,14 @@ button {
     padding: 12px;
     cursor: pointer;
     font-weight: bold;
+    width: 150px;
+    display: block;
+    margin: 20px auto 0; /* Centraliza o botão */
     transition: 0.3s;
-    margin-top: 10px; /* Garante que o botão não cole no texto acima */
-    width: 120px;
-    height: 40px;
-    margin: 0 auto;
 }
 
 button:hover {
     background-color: rgb(57, 57, 224);
     color: white;
-    width: 140px;
-    margin: 0 auto;
-}
-
-.assinar{
-    width: 45%;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 20px;
-    background: rgb(225, 240, 253);
-}
-
-input{
-    border-radius: 10px;
-    width: 350px;
-    height: 25px;
-    border: none;
-}
-
-select{
-    width: 150px;
-    height: 30px;
+    width: 160px;
 }
